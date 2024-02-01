@@ -1,0 +1,25 @@
+<h3>One way</h3>
+{{variable1}}
+
+<h3>Two ways</h3>
+<input type="text" [(ngModel)]="variable2">
+<br>
+{{variable2}}
+
+<h3>Event Binding</h3>
+<input type="boutton" (click)="coucouMarc()" value="clique ici stp!">
+<br>
+{{variable3 | uppercase}}
+
+<h3>Attribute Binding</h3>
+<input type="button" value="Je ne sais pas si je peux cliquer dessus" [disabled]="desactive">
+
+<h1> Exercice</h1>
+
+<!-- Créer input pour l'âge-->
+<input type="number" [(ngModel)]="age" [disabled]="desactiveLeRetour">
+<br>
+J'ai {{age}} ans
+<button (click)="isMajeur()">MajeurCheck</button>
+<br>
+{{majeur}}

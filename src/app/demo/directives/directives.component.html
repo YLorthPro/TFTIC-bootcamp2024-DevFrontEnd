@@ -1,0 +1,22 @@
+<h1>Directives</h1>
+<div *ngIf="bool">
+    {{uneVariable}}
+</div>
+<div>
+    <tr *ngFor="let element of prenoms">
+        <td>{{element}}</td>
+    </tr>
+</div>
+
+<h1>Exercice</h1>
+<div>
+    <tr *ngFor="let f of films">
+        <td *ngIf="f.length%2 != 0">{{f}}</td>
+    </tr>
+</div>
+
+<h1>Input - Output</h1>
+
+<!-- J'affecte la valeur de films dans filmsEnfant(qui est dans l'enfant)
+Lorsque un événement est emis, je fais la fonction traitementEvenement-->
+<app-input-output [filmsEnfant]=films (evenement)="traitementEvenement($event)"></app-input-output>

@@ -1,0 +1,29 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #f8f8f8;
+    padding-top: 20px;
+}
+
+.navbar {
+    margin-top: 20px;
+}
+
+.lien {
+    margin-bottom: 10px;
+}
+
+.lien a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lien a:hover {
+    background-color: #ddd;
+}

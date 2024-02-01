@@ -1,0 +1,19 @@
+footer {
+    background-color: #ffe6b3;
+    padding: 20px;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-copyright p {
+    margin: 5px 0;
+    color: #663300;
+    font-size: 14px;
+}
+
+.footer-copyright p:last-child {
+    font-style: italic;
+}

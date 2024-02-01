@@ -1,0 +1,7 @@
+<div>
+    <tr *ngFor="let item of stockDuDemoService">
+        <td>{{item}}</td>
+    </tr>
+    <input type="text" [(ngModel)]="produit">
+    <button (click)="ajouter()">Ajouter</button>
+</div>

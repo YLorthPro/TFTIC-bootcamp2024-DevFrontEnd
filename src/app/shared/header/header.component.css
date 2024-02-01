@@ -1,0 +1,16 @@
+header {
+    background-color: #ffd699;
+    padding: 20px;
+}
+
+.header-contenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: #663300;
+    font-size: 24px;
+    margin: auto;
+}
