@@ -18,9 +18,17 @@
         Vous avez perdu!
     </div>
 
+  <!-- Plus besoin avec formulaire
     <input type="number" [(ngModel)] = nombreJoueur>
     <button (click)="deviner()" [disabled]="finDePartie">Deviner</button>
     <button *ngIf="finDePartie"(click)="rejouer()">Rejouer</button>
+    -->
+
+    <form [formGroup]="formulaire" (ngSubmit)="deviner()">
+      <input type="number" formControlName="entreeUtilisateur">
+      <input type="submit" [disabled]="finDePartie || !formulaire.valid" value="Deviner">
+      <button *ngIf="finDePartie"(click)="rejouer()">Rejouer</button>
+    </form>
 
     <div class="essais">
         <app-erreur [tabEssais]="essais" [aDeviner]="nombreAleatoire"></app-erreur>

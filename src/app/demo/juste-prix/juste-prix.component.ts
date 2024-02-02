@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScoreService } from './score.service';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-juste-prix',
@@ -11,19 +12,25 @@ export class JustePrixComponent {
     nombreAleatoire: number;
     essais: number[] = [];
     resultats: number[] = [0,0];
-    nombreJoueur: number = 0;
+//    nombreJoueur: number = 0; pas besoin avec le FormGroup
     finDePartie: boolean = false;
+    formulaire: FormGroup;
 
-    constructor(private _score: ScoreService){
+    constructor(private _score: ScoreService, private _formBuilder: FormBuilder){
       this.resultats[0] = _score.getVictoires();
       this.resultats[1] = _score.getDefaites();
       this.nombreAleatoire= Math.floor(Math.random() * 1000) + 1;
+      this.formulaire = _formBuilder.group({
+          entreeUtilisateur: [0, [Validators.required, Validators.min(0), Validators.max(1000)]]
+      });
     }
 
     deviner(){
-      this.essais.push(this.nombreJoueur);
-      this.nombreJoueur = 0;
-      if(this.nombreJoueur === this.nombreAleatoire || this.essais.length === 10){
+      let valeur = this.formulaire.get('entreeUtilisateur')!.value;
+
+      this.essais.push(valeur);
+      this.formulaire.controls['entreeUtilisateur'].setValue(0);
+      if(valeur === this.nombreAleatoire || this.essais.length === 10){
         this.finDePartie = true;
         if(this.aGagne())
           this._score.setVictoires();

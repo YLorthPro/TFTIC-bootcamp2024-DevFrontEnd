@@ -9,7 +9,7 @@ import { ContactComponent } from './demo/contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BidingsComponent } from './demo/bidings/bidings.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DirectivesComponent } from './demo/directives/directives.component';
 import { InputOutputComponent } from './demo/directives/input-output/input-output.component';
 import { DemoServicesComponent } from './demo/demo-services/demo-services.component';
@@ -34,7 +34,8 @@ import {ErreurComponent} from "./demo/juste-prix/erreur/erreur.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:[BrowserModule],
   providers: [],
