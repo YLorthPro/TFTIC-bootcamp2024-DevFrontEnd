@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './demo/directives/directives.component';
 import { InputOutputComponent } from './demo/directives/input-output/input-output.component';
 import { DemoServicesComponent } from './demo/demo-services/demo-services.component';
+import { JustePrixComponent } from "./demo/juste-prix/juste-prix.component";
+import {ErreurComponent} from "./demo/juste-prix/erreur/erreur.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DemoServicesComponent } from './demo/demo-services/demo-services.compon
     BidingsComponent,
     DirectivesComponent,
     InputOutputComponent,
-    DemoServicesComponent
+    DemoServicesComponent,
+    JustePrixComponent,
+    ErreurComponent
   ],
   imports: [
     BrowserModule,
