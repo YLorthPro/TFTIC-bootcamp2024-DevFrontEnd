@@ -6,6 +6,7 @@ import { BidingsComponent } from './demo/bidings/bidings.component';
 import { DirectivesComponent } from './demo/directives/directives.component';
 import { DemoServicesComponent } from './demo/demo-services/demo-services.component';
 import { JustePrixComponent } from './demo/juste-prix/juste-prix.component';
+import {ConnectionAPIComponent} from "./demo/connection-api/connection-api.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path : 'directives', component: DirectivesComponent},
   { path : 'services', component: DemoServicesComponent},
   { path : 'juste-prix', component: JustePrixComponent},
+  { path : 'appel-API', component: ConnectionAPIComponent},
+
 ];
 
 @NgModule({

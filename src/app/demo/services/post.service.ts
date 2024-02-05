@@ -14,5 +14,14 @@ export class PostService {
   avoirToutLesPosts(){
     return this._httpClient.get<Post[]>("https://jsonplaceholder.typicode.com/posts/")
   }
+
+  avoirUnPost(id: number){
+    return this._httpClient.get<Post>("https://jsonplaceholder.typicode.com/posts/" + id)
+  }
+
+  posterUnPost(post: Post){
+    return this._httpClient.post<void>("https://jsonplaceholder.typicode.com/posts/", post)
+  }
+
 }
 

@@ -1,0 +1,18 @@
+
+<table *ngIf="listePosts">
+  <tr *ngFor="let element of listePosts">
+    <td>{{element.id}}</td>
+    <td>{{element.title}}</td>
+  </tr>
+</table>
+
+<input type="number" [(ngModel)]="postId">
+<button (click)="postSelectionne()">Rechercher</button>
+
+<div>
+  <div *ngIf="post">
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <p>Utilisateur: {{utilisateur?.name}}</p>
+  </div>
+</div>

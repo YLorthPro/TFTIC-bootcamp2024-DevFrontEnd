@@ -15,6 +15,8 @@ import { InputOutputComponent } from './demo/directives/input-output/input-outpu
 import { DemoServicesComponent } from './demo/demo-services/demo-services.component';
 import { JustePrixComponent } from "./demo/juste-prix/juste-prix.component";
 import {ErreurComponent} from "./demo/juste-prix/erreur/erreur.component";
+import { ConnectionAPIComponent } from './demo/connection-api/connection-api.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,13 +31,15 @@ import {ErreurComponent} from "./demo/juste-prix/erreur/erreur.component";
     InputOutputComponent,
     DemoServicesComponent,
     JustePrixComponent,
-    ErreurComponent
+    ErreurComponent,
+    ConnectionAPIComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports:[BrowserModule],
   providers: [],
